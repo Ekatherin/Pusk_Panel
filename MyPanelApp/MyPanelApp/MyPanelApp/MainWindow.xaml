@@ -1,0 +1,47 @@
+﻿<Window x:Class="MyPanelApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MyPanelApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="2*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Rectangle Grid.Column="0" Fill="LightCyan"></Rectangle>
+        <Rectangle Grid.Column="1" Fill="LightGreen"></Rectangle>
+        <Rectangle Grid.Column="2" Fill="LightPink"></Rectangle>
+        <StackPanel Grid.Column="0" VerticalAlignment="Top">
+            <Button x:Name="ExmBtn" Content="New"></Button>
+        </StackPanel>
+        <StackPanel Grid.Column="0" VerticalAlignment="Bottom">
+            <Button x:Name="AppsBtn" Content="Apps" Click="AppsBtn_Click"></Button>
+            <Button x:Name="SettingsBtn" Content="Settings"></Button>
+        </StackPanel>
+        <ListView Name ="AppsListView" Grid.Column="1">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <StackPanel>
+                            <Label Content="{Binding Category}" Background="LightGreen"></Label>
+                        </StackPanel>
+                        <Label Content="{Binding Title}"></Label>
+                        <Label Content="{Binding FilePath}"></Label>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <ScrollViewer  VerticalScrollBarVisibility="Auto" Grid.Column="2">
+            <WrapPanel ItemHeight="200" ItemWidth="200" Background="AntiqueWhite" >
+                <Button>1</Button>
+                <Button>2</Button>
+                <Button>3</Button>
+                <Button>4</Button>
+            </WrapPanel>
+        </ScrollViewer>
+    </Grid>
+</Window>

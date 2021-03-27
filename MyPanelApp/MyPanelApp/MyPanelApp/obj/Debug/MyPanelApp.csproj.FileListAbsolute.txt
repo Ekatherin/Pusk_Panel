@@ -1,0 +1,17 @@
+D:\MyPanelApp\MyPanelApp\MyPanelApp\obj\Debug\MyPanelApp.csprojAssemblyReference.cache
+D:\MyPanelApp\MyPanelApp\MyPanelApp\obj\Debug\AppsWindow.g.cs
+D:\MyPanelApp\MyPanelApp\MyPanelApp\obj\Debug\MainWindow.g.cs
+D:\MyPanelApp\MyPanelApp\MyPanelApp\obj\Debug\App.g.cs
+D:\MyPanelApp\MyPanelApp\MyPanelApp\obj\Debug\MyPanelApp_MarkupCompile.cache
+D:\MyPanelApp\MyPanelApp\MyPanelApp\obj\Debug\MyPanelApp_MarkupCompile.lref
+D:\MyPanelApp\MyPanelApp\MyPanelApp\bin\Debug\MyPanelApp.exe.config
+D:\MyPanelApp\MyPanelApp\MyPanelApp\bin\Debug\MyPanelApp.exe
+D:\MyPanelApp\MyPanelApp\MyPanelApp\bin\Debug\MyPanelApp.pdb
+D:\MyPanelApp\MyPanelApp\MyPanelApp\obj\Debug\AppsWindow.baml
+D:\MyPanelApp\MyPanelApp\MyPanelApp\obj\Debug\MainWindow.baml
+D:\MyPanelApp\MyPanelApp\MyPanelApp\obj\Debug\MyPanelApp.g.resources
+D:\MyPanelApp\MyPanelApp\MyPanelApp\obj\Debug\MyPanelApp.Properties.Resources.resources
+D:\MyPanelApp\MyPanelApp\MyPanelApp\obj\Debug\MyPanelApp.csproj.GenerateResource.cache
+D:\MyPanelApp\MyPanelApp\MyPanelApp\obj\Debug\MyPanelApp.csproj.CoreCompileInputs.cache
+D:\MyPanelApp\MyPanelApp\MyPanelApp\obj\Debug\MyPanelApp.exe
+D:\MyPanelApp\MyPanelApp\MyPanelApp\obj\Debug\MyPanelApp.pdb
