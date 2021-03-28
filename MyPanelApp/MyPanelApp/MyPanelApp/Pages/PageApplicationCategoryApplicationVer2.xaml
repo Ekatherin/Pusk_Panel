@@ -14,17 +14,35 @@
             <ColumnDefinition Width="auto"></ColumnDefinition>
             <ColumnDefinition MinWidth="100"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <DataGrid Name="CategoriesGrid" ItemsSource="{Binding ApplicationCategories}"  AutoGenerateColumns="False">
+        <DataGrid Name="CategoriesGrid" ItemsSource="{Binding ApplicationCategories}"  AutoGenerateColumns="False" SelectionChanged="CategoriesGrid_SelectionChanged">
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding Title}" Width="*"></DataGridTextColumn>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Name="CatEditNew" Click="CatEditNew_Click">
+                                ...
+                            </Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
         <GridSplitter Width="10" HorizontalAlignment="Center" Grid.Column="1"></GridSplitter>
-        <DataGrid Grid.Column="2" ItemsSource="{Binding ElementName=CategoriesGrid, Path=SelectedItem.Application, Mode=OneWay}" AutoGenerateColumns="False">
+        <DataGrid Grid.Column="2" ItemsSource="{Binding ElementName=CategoriesGrid, Path=SelectedItem.Application, Mode=OneWay}" AutoGenerateColumns="False" SelectionChanged="DataGrid_SelectionChanged">
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding Title}" Width="1*"></DataGridTextColumn>
                 <DataGridTextColumn Binding="{Binding FilePath}" Width="1*"></DataGridTextColumn>
                 <DataGridTextColumn Binding="{Binding ImagePath}" Width="1*"></DataGridTextColumn>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Name ="AppEditNew" Click="AppEditNew_Click">
+                                ...
+                            </Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
             </DataGrid.Columns>
 
         </DataGrid>

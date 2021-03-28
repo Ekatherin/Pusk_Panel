@@ -27,5 +27,6 @@ namespace MyPanelApp.Data
     
         public virtual DbSet<Application> Application { get; set; }
         public virtual DbSet<ApplicationCategory> ApplicationCategory { get; set; }
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
     }
 }

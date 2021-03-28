@@ -25,5 +25,38 @@ namespace MyPanelApp.Pages
             InitializeComponent();
             this.DataContext = Core.VM;
         }
+
+        private void AppEditNew_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void CatEditNew_Click(object sender, RoutedEventArgs e)
+        {
+            
+
+        }
+
+        private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var item = (sender as DataGrid).SelectedItem;
+            var app = item as Data.Application;
+
+
+            var editPage = new PageAppEditNew(app);
+
+            NavigationService.Navigate(editPage);
+        }
+
+        private void CategoriesGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            //var item = (sender as DataGrid).SelectedItem;
+            //var app = item as Data.ApplicationCategory;
+
+
+            //var editPage = new PageCatEditNew(app);
+
+            //NavigationService.Navigate(editPage);
+        }
     }
 }

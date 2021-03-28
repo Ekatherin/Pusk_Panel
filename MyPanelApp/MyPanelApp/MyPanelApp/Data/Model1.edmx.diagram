@@ -8,6 +8,7 @@
         <EntityTypeShape EntityType="MyPanelModel.Application" Width="1.5" PointX="5.125" PointY="1.375" IsExpanded="true" />
         <EntityTypeShape EntityType="MyPanelModel.ApplicationCategory" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
         <AssociationConnector Association="MyPanelModel.FK_Application_ApplicationCategory" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="MyPanelModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="3.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

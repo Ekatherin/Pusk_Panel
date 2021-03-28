@@ -66,8 +66,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Data\sysdiagrams.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="MyPanelNavigator.xaml.cs">
       <DependentUpon>MyPanelNavigator.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PageAppEditNew.xaml.cs">
+      <DependentUpon>PageAppEditNew.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\PageApplication.xaml.cs">
       <DependentUpon>PageApplication.xaml</DependentUpon>
@@ -80,6 +86,9 @@
     </Compile>
     <Compile Include="Pages\PageApplicationCategoryApplicationVer2.xaml.cs">
       <DependentUpon>PageApplicationCategoryApplicationVer2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PageCatEditNew.xaml.cs">
+      <DependentUpon>PageCatEditNew.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModel.cs" />
     <Page Include="AppsWindow.xaml">
@@ -134,6 +143,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\PageAppEditNew.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\PageApplication.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -147,6 +160,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\PageApplicationCategoryApplicationVer2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PageCatEditNew.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
