@@ -17,6 +17,7 @@
             <Button Click="PageAppShow">Application</Button>
             <Button Click="PageCatAppShow">ApplicationCategory</Button>
             <Button Click="PageCatCatAppShow">ApplicationCategoryApplication</Button>
+            <Button Click="PageCatCatAppShowVer2">ApplicationCategoryApplicationVer2</Button>
         </StackPanel>
         <Frame NavigationUIVisibility="Hidden" Grid.Row="1"   Name="MyFrame">
         </Frame>

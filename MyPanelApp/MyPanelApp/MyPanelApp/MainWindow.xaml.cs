@@ -40,8 +40,8 @@ namespace MyPanelApp
 
             //AppsListView.ItemsSource = Core.DB.Application.ToList();
 
-            Core.VM.Applications = Core.DB.Application.ToList();
-            Core.VM.ApplicationCategories = Core.DB.ApplicationCategory.ToList();
+            //Core.VM.Applications = Core.DB.Application.ToList();
+            //Core.VM.ApplicationCategories = Core.DB.ApplicationCategory.ToList();
 
             DataContext = Core.VM;
 

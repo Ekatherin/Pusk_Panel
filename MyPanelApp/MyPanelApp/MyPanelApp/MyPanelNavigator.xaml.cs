@@ -50,5 +50,10 @@ namespace MyPanelApp
         {
             MyFrame.Navigate(new Pages.PageApplicationCategoryApplication());
         }
+
+        private void PageCatCatAppShowVer2(object sender, RoutedEventArgs e)
+        {
+            MyFrame.Navigate(new Pages.PageApplicationCategoryApplicationVer2());
+        }
     }
 }

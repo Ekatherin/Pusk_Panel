@@ -32,3 +32,5 @@ D:\MyPanelApp\MyPanelApp\MyPanelApp\obj\Debug\Pages\PageApplication.baml
 D:\MyPanelApp\MyPanelApp\MyPanelApp\obj\Debug\Pages\PageApplicationCategory.baml
 D:\MyPanelApp\MyPanelApp\MyPanelApp\obj\Debug\Pages\PageApplicationCategoryApplication.g.cs
 D:\MyPanelApp\MyPanelApp\MyPanelApp\obj\Debug\Pages\PageApplicationCategoryApplication.baml
+D:\MyPanelApp\MyPanelApp\MyPanelApp\obj\Debug\Pages\PageApplicationCategoryApplicationVer2.g.cs
+D:\MyPanelApp\MyPanelApp\MyPanelApp\obj\Debug\Pages\PageApplicationCategoryApplicationVer2.baml

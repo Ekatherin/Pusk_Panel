@@ -78,6 +78,9 @@
     <Compile Include="Pages\PageApplicationCategoryApplication.xaml.cs">
       <DependentUpon>PageApplicationCategoryApplication.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\PageApplicationCategoryApplicationVer2.xaml.cs">
+      <DependentUpon>PageApplicationCategoryApplicationVer2.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ViewModel.cs" />
     <Page Include="AppsWindow.xaml">
       <SubType>Designer</SubType>
@@ -140,6 +143,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\PageApplicationCategoryApplication.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PageApplicationCategoryApplicationVer2.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
