@@ -6,9 +6,16 @@
         xmlns:local="clr-namespace:MyPanelApp"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <Style TargetType="Button" x:Key="MyAzureStyle">
+            <Setter Property="Background" Value="Azure"></Setter>
+            <Setter Property="FontSize" Value="20"></Setter>
+        </Style>
+    </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="100"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
             <ColumnDefinition Width="1*"></ColumnDefinition>
             <ColumnDefinition Width="2*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
@@ -16,18 +23,18 @@
         <Rectangle Grid.Column="1" Fill="LightGreen"></Rectangle>
         <Rectangle Grid.Column="2" Fill="LightPink"></Rectangle>
         <StackPanel Grid.Column="0" VerticalAlignment="Top">
-            <Button x:Name="ExmBtn" Content="New"></Button>
+            <Button x:Name="GalleryBtn" Content="Gallery" Click="GalleryBtn_Click"></Button>
         </StackPanel>
         <StackPanel Grid.Column="0" VerticalAlignment="Bottom">
             <Button x:Name="AppsBtn" Content="Apps" Click="AppsBtn_Click"></Button>
             <Button x:Name="SettingsBtn" Content="Settings"></Button>
         </StackPanel>
-        <ListView Name ="AppsListView" Grid.Column="1">
+        <ListView ItemsSource ="{Binding Applications}" Name ="AppsListView" Grid.Column="1" >
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
-                        <StackPanel>
-                            <Label Content="{Binding Category}" Background="LightGreen"></Label>
+                        <StackPanel Orientation="Horizontal">
+                            <Label Content="{Binding ApplicationCategory.Title}" Background="LightGreen"></Label>
                         </StackPanel>
                         <Label Content="{Binding Title}"></Label>
                         <Label Content="{Binding FilePath}"></Label>
@@ -35,13 +42,34 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        <ScrollViewer  VerticalScrollBarVisibility="Auto" Grid.Column="2">
+        <StackPanel Grid.Column="2">
+            <TextBox Name="SearchText" TextChanged="SearchTextBox_TextChanged">
+
+            </TextBox>
+
+            <ComboBox Name="CategoryCombobox"
+                      DisplayMemberPath="Title"
+                      SelectedItem="{Binding ElementName=AppsListView, Path=SelectedItem.ApplicationCategory}">
+            </ComboBox>
+            <TextBox Name="CategoryTitle"
+                             Text="{Binding ElementName=AppsListView, 
+                             Path=SelectedItem.ApplicationCategory.Title}"/>
+            <TextBox x:Name="TitleTextBox" 
+                             Text="{Binding ElementName=AppsListView, 
+                             Path=SelectedItem.Title}"/>
+            <TextBox x:Name="DiscriptionTextBox" 
+                             Text="{Binding ElementName=AppsListView, 
+                             Path=SelectedItem.FilePath}"/>
+            <Button Name="SaveBtn" Content="Save" Click="SaveBtn_Click"></Button>
+        </StackPanel>
+        <ScrollViewer  VerticalScrollBarVisibility="Auto" Grid.Column="3">
             <WrapPanel ItemHeight="200" ItemWidth="200" Background="AntiqueWhite" >
-                <Button>1</Button>
+                <Button Style="{StaticResource MyBrownStyle}">1</Button>
                 <Button>2</Button>
                 <Button>3</Button>
-                <Button>4</Button>
+                <Button Style="{StaticResource MyAzureStyle}">4</Button>
             </WrapPanel>
         </ScrollViewer>
     </Grid>
 </Window>
+

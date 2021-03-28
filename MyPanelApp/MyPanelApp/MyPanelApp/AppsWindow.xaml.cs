@@ -22,6 +22,23 @@ namespace MyPanelApp
         public AppsWindow()
         {
             InitializeComponent();
+            DataContext = Core.VM;
+        }
+
+        private void SaveButton_Click(object sender, RoutedEventArgs e)
+        {
+            var a = new Data.Application();
+
+            a.Title = AppTitle.Text;
+            a.FilePath = AppFilePath.Text;
+            a.ImagePath = AppImageFilePath.Text;
+            a.ApplicationCategory = AppCategoryCombobox.SelectedItem as Data.ApplicationCategory;
+
+            Core.DB.Application.Add(a);
+
+            Core.DB.SaveChanges();
+
+            Core.VM.Applications.Add(a);
         }
     }
 }

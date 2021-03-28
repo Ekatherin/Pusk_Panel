@@ -7,6 +7,19 @@
         mc:Ignorable="d"
         Title="AppsWindow" Height="450" Width="800">
     <Grid>
-        
+        <StackPanel>
+            <Label>App Name</Label>
+            <TextBox x:Name="AppTitle"></TextBox>
+
+            <Label>App FilePath</Label>
+            <TextBox x:Name="AppFilePath"></TextBox>
+
+            <Label>App ImageFilePath</Label>
+            <TextBox x:Name="AppImageFilePath"></TextBox>
+
+            <Label>App Category</Label>
+            <ComboBox ItemsSource="{Binding ApplicationCategories}" x:Name="AppCategoryCombobox" DisplayMemberPath="Title"></ComboBox>
+            <Button x:Name="SaveButton" Click="SaveButton_Click" >Save</Button>
+        </StackPanel>
     </Grid>
 </Window>
